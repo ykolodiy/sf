@@ -1,2 +1,8 @@
 // import apex function in lwc component js file
 import seachLeads from '@salesforce/apex/leadsearchController.seachLead';
+location of .cls class is force-app/main/default/classes/leadsearchController
+
+
+//use lws component in html
+component name (folder): someFunnyComponent
+in html use: <some-funny-component>
