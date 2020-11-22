@@ -27,3 +27,6 @@ sfdx force:org:open   // to open browser and see changes online
 
 10
 u can setup > lightning app builder > drag custom lwc component > enable and see
+
+11 // delete scratch
+sfdx force:org:delete -u useremailcopiedfromscratchorg
