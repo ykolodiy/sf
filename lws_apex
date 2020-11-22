@@ -1,0 +1,2 @@
+// import apex function in lwc component js file
+import seachLeads from '@salesforce/apex/leadsearchController.seachLead';
