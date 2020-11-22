@@ -30,3 +30,6 @@ u can setup > lightning app builder > drag custom lwc component > enable and see
 
 11 // delete scratch
 sfdx force:org:delete -u useremailcopiedfromscratchorg
+
+12 // pull metadata to not create new app every time after it expired
+sfdx force:source:pull -f
