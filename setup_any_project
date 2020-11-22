@@ -1,0 +1,29 @@
+1 cd myProject
+
+2 //authorize the org ( d - default, a - alias)
+sfdx force:auth:web:login -d -a myOrg
+
+3 login+password in browser
+
+4 // create project with conf files in the folder
+sfdx force:project:create -n myFirstProject
+
+5 // go to new created project folder and run to create the actual scrtach org (s - scratch is default, f - cong file path,  a - alias)
+sfdx force:org:create -s -f config/enterprise-scratch-def.json -a MyScratchOrg
+
+6 verify scratch created (list of devhubs and scratch org)
+sfdx force:org:list
+D - dev hub
+U - scratch org
+
+7 // create one more time if after 7 days old expired
+sfdx force:org:create -s -f config/enterprise-scratch-def.json -a MyScratchOrg 
+
+8 // push code to scratch org
+sfdx force:source:push   
+
+9 // after it push to open browser and see changes online
+sfdx force:org:open   // to open browser and see changes online
+
+10
+u can setup > lightning app builder > drag custom lwc component > enable and see
