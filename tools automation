@@ -1,0 +1,37 @@
+1 workflow rules: settings > process automation > workflow rules(actions)
+// when opp is create where amm > 1000 > send email
+in input dropdown fields:
+- if: create criteria: on create or edit of opportunity with amount > 1000000
+- do: new task, new email(create template), new field update, send API message XML
+
+
+2 process builder (newer, recomended over workflow rules): settings > process builder
+// when create account > create automatically contract with value = 1000000
+	in schema blocks:
+	select: object
+	if: criteria (record changed, platform event occurs, another process invoked)
+	do: action (imediate/scheduled)
+-create record
+-update record
+-launch a flow or another procees builder
+-send email
+-schedule action
+-execute apex code
+-submit record for approval
+-post to chatter
+
+3 flow builder: settings > flow
+- screen flow > block interaction+logic+data
+- can query recorde based on input
+- kick of from buttons, links, apex, event message, record created, or process builder
+
+4 triggers
+
+5 validation rules
+select object > add validation rule on save/create new object record
+- object > validation rule ammount should not be smaller < 0
+
+6 approval processes
+- setup > new approval > select object > select email template > select field and condition on which u want approval opp.ammount > 1000000$ > select user approver > save
+- select approval steps > set temp field status while wait for approval > add final approval actions > set field value on approval/reject
+-activate
