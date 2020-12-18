@@ -1,35 +1,13 @@
-1 cd myProject
-
-2 //authorize the org ( d - default, a - alias)
-sfdx force:auth:web:login -d -a myOrg
-
-3 login+password in browser
-
-4 // create project with conf files in the folder
-sfdx force:project:create -n myFirstProject
-
-5 // go to new created project folder and run to create the actual scrtach org (s - scratch is default, f - cong file path,  a - alias)
-sfdx force:org:create -s -f config/enterprise-scratch-def.json -a MyScratchOrg
-
-6 verify scratch created (list of devhubs and scratch org)
-sfdx force:org:list
-D - dev hub
-U - scratch org
-
-7 // create one more time if after 7 days old expired
-sfdx force:org:create -s -f config/enterprise-scratch-def.json -a MyScratchOrg 
-
-8 // push code to scratch org
-sfdx force:source:push   
-
-9 // after it push to open browser and see changes online
-sfdx force:org:open   // to open browser and see changes online
-
-10
-u can setup > lightning app builder > drag custom lwc component > enable and see
-
-11 // delete scratch
-sfdx force:org:delete -u useremailcopiedfromscratchorg
-
-12 // pull metadata to not create new app every time after it expired (to create new tab in app with lwc component attached)
-sfdx force:source:pull -f
+1 Install VsCode
+2 Install Salesforce DX CLI
+3  Install Salesforce Extension Pack
+We are almost there. Open your VsCode and Click on Extensions icon on left hand side or press CTRL+SHIFT+X. Then Search for “Salesforce Extension Pack” and click on install button
+4 Create Project
+Congratulation. Till this step your software setup is completed. Now its time to create your first project in VsCode. To Create the project open Command Palette or press Ctrl + Shit + P.  Then type SFDX: Create Project with Manifest
+5 Connect with your Salesforce Org
+Our project is ready on our local machine, Its time to connect our VsCode with Salesforce. Again open Command Palette or press Ctrl + Shit + P.   This time we need to type or Select “SFDX: Authorize an Org“.
+ALLOW
+6 Retrieve Component
+Now you want to extract all your Salesforce component in your VsCode? Open Package.xml file from Manifest folder. Then Modify your Package.xml file to add and remove component. Finally Click on Package.xml and select “SFDX: Retrieve This Source from Org” option
+7 Deploy component
+Open any file and work one your component. IF you want to learn about how to create Lightning Web Component then check this post. Now do your changes in VSCode and then select the file which you want to deploy in your org. Then Right click on VsCode and select “SFDC: Deploy This Source to Org” option for deployment.
