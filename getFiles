@@ -1,3 +1,6 @@
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-array-constructor */
 /* eslint-disable no-param-reassign */
 /* eslint-disable guard-for-in */
 /* eslint-disable no-restricted-syntax */
@@ -17,7 +20,8 @@ function getFiles(dir, files_) {
     return files_;
 }
 
-// console.log(getFiles('./test').toString());
 const x = getFiles('./test').toString();
-
-console.log(x.match(/(?:^|\D)(\d{5})(?!\d)/g));
+const a = x.match(/(?:^|\D)(\d{5})(?!\d)/g);
+const w = a.map((item) => item.replace('_', ''));
+console.log(`length: ${w.length}`);
+w.sort().forEach((e) => console.log(e));
