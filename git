@@ -1,0 +1,16 @@
+git checkout origin development
+git pull
+git checkout <branch>
+git rebase development
+
+# address any merge conflicts
+(exact commands will vary)
+
+# run the linter to be sure no issues exist
+npm run lint 
+
+# if errors exist, you can run this to automatically fix them
+./node_modules/.bin/eslint ./test --fix
+
+# then use 'git add' and 'git commit' commands to apply the changes 
+git push --force
