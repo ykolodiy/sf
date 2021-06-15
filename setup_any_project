@@ -3,11 +3,19 @@
 3  Install Salesforce Extension Pack
 We are almost there. Open your VsCode and Click on Extensions icon on left hand side or press CTRL+SHIFT+X. Then Search for “Salesforce Extension Pack” and click on install button
 4 Create Project
-Congratulation. Till this step your software setup is completed. Now its time to create your first project in VsCode. To Create the project open Command Palette or press Ctrl + Shit + P.  Then type SFDX: Create Project with Manifest
+Congratulation. Till this step your software setup is completed. Now its time to create your first project in VsCode. To Create the project open Command Palette or 
+
+press Ctrl + Shit + P.  Then type SFDX: Create Project with Manifest
 5 Connect with your Salesforce Org
-Our project is ready on our local machine, Its time to connect our VsCode with Salesforce. Again open Command Palette or press Ctrl + Shit + P.   This time we need to type or Select “SFDX: Authorize an Org“.
+Our project is ready on our local machine, Its time to connect our VsCode with Salesforce. Again open Command Palette or press 
+
+press Ctrl + Shit + P.   This time we need to type or Select “SFDX: Authorize an Org“.
 ALLOW
 6 Retrieve Component
-Now you want to extract all your Salesforce component in your VsCode? Open Package.xml file from Manifest folder. Then Modify your Package.xml file to add and remove component. Finally Click on Package.xml and select “SFDX: Retrieve This Source from Org” option
+Now you want to extract all your Salesforce component in your VsCode? Open Package.xml file from Manifest folder. Then Modify your Package.xml file to add and remove component. Finally 
+
+Click on Package.xml and select “SFDX: Retrieve This Source from Org” option
 7 Deploy component
-Open any file and work one your component. IF you want to learn about how to create Lightning Web Component then check this post. Now do your changes in VSCode and then select the file which you want to deploy in your org. Then Right click on VsCode and select “SFDC: Deploy This Source to Org” option for deployment.
+Open any file and work one your component. IF you want to learn about how to create Lightning Web Component then check this post. Now do your changes in VSCode and then 
+
+select the file which you want to deploy in your org. Then Right click on VsCode and select “SFDC: Deploy This Source to Org” option for deployment.
