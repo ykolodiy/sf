@@ -1,7 +1,0 @@
-1 devhub enabled
-2 cli sfdx installed
-3 cd myProject1
-4 AUTH command: sfdx force:auth:web:login -d -a myProject1
-5 browser opened > login > allow
-6 CREATE sfdx project command: sfdx force:project:create -n myProject1
-
